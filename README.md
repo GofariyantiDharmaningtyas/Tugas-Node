@@ -2,7 +2,9 @@
 #include <cstdlib>
 #include <stdlib.h>
 #include <conio.h> 
+
 using namespace std;
+
 struct node
 {
   int num;
