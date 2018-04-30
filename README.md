@@ -94,3 +94,39 @@ void hapusbelakang()
     }
    }
 } 
+int main()
+{	
+	head = NULL;
+	init(5);
+  	init(19);
+  	init(11);
+  	init(9);
+  	init(10);
+  	int pilih;
+  do{
+    display_list();
+    cout<<endl;
+    cout<<"Pilih operasi! "<<endl;
+    cout<<"1. Tambah awal"<<endl;
+    cout<<"2. Tambah akhir"<<endl;
+    cout<<"3. Tambah tengah (Sisipkan nilai)"<<endl;
+    cout<<"4. Hapus awal"<<endl;
+    cout<<"5. Hapus akhir"<<endl;
+    cout<<endl<<"Masukkan pilihan (1/2/3/4/5): ";
+    cin>>pilih;
+switch(pilih){
+  case 1 : tambahawal(); 
+    break;
+  case 2 : tambahakhir();
+    break;
+  case 3 : tambah_tengah();
+    break;
+  case 4 : hapusdepan();
+    break;
+  case 5 : hapusbelakang();
+    break;
+  }
+ }  
+while (pilih != 0);
+return 0; 
+}
