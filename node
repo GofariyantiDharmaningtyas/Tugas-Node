@@ -96,6 +96,37 @@ void hapusbelakang()
    }
 } 
 
+void tambah_tengah()
+{
+  node *baru, *bantu;
+  int position;
+  if(head != NULL)
+  {
+  
+   
+    cout<<"Akan disisipkan setelah data ke : ";
+    cin>>position;
+    baru = new node;
+    bantu = head;
+     
+    for(int i = 1; i < position-1;i++) {
+      if(bantu->next != NULL)
+        bantu=bantu->next;
+      else
+        break; 
+    }
+  cout << "Masukkan num     : ";
+  cin >> baru->num;
+  baru->next=bantu->next;
+  bantu->next=baru;
+  }
+  else
+  {
+    cout<<"Belum ada data !! silahkan isi data dulu....";
+    getch();
+  } 
+} 
+
 int main()
 {	
 	head = NULL;
