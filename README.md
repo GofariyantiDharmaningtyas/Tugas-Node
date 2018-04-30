@@ -96,6 +96,7 @@ void hapusbelakang()
     }
    }
 } 
+
 int main()
 {	
 	head = NULL;
