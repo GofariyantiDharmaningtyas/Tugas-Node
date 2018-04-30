@@ -49,3 +49,52 @@ void tambahakhir(){
 //void buat ubah lainnya
 
 //int main
+void display_list()
+{
+  node *temp;
+  temp = head;
+  cout << endl;
+cout << "DATA [";  
+  if (temp == NULL){
+    cout << "List kosong!" << endl;
+	}else{
+    while (temp != NULL){
+     cout << "" << temp->num << ",";
+     if (temp == posisi)
+	cout<<"     <<<< posisi node";
+     temp=temp->next; 
+    }
+    cout<<"] ";  
+  }
+} 
+
+void hapusdepan()
+{
+  node *temp;
+  temp = head;
+  head = head->next;
+  delete temp;
+} 
+
+void hapusbelakang()
+{
+  node *temp1, *temp2;
+  if (head == NULL){
+  cout<<"Kosong!"<<endl;
+  }else{
+    temp1 = head;
+    if (temp1->next == NULL)
+    {
+      delete temp1;
+      head = NULL;
+    }else{
+      while (temp1->next != NULL)
+      {
+        temp2 = temp1;
+        temp1 = temp1->next;
+      }
+      delete temp1;
+      temp2->next = NULL;
+    }
+   }
+} 
