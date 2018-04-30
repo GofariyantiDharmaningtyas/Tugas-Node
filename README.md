@@ -8,7 +8,6 @@ struct node
   int num;
   node *next; 
 };
- 
 	node *head=NULL;
 	node *posisi; 
 	int option=0;
@@ -46,9 +45,6 @@ void tambahakhir(){
   }
 } 
 
-//void buat ubah lainnya
-
-//int main
 void display_list()
 {
   node *temp;
